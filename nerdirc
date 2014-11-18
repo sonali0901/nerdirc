@@ -1,0 +1,17 @@
+#! /usr/bin/env python3
+
+if __name__ == '__main__':
+    from tkinter import Tk
+    from nerdlib.app import Nerd
+    root = Tk()
+    nerd = Nerd(root)
+    #styling = ttk.Style()
+    #styling.theme_use('clam')
+    root.mainloop()
+
+
+
+
+
+
+

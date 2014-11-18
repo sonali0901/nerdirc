@@ -1,0 +1,19 @@
+{
+    "lquery":["/query (?P<nick>.*)", 0],
+    "lq":["/q (?P<nick>.*)", 0],
+    "lpart":["/part", 0],
+    "lp":["/p", 0],
+    "lmsg":["/msg (?P<target>[^ ]+) (?P<msg>.*)", 0],
+
+    "lj":["/j (?P<target>[^ ]+)", 0]
+}
+
+
+
+
+
+
+
+
+
+
