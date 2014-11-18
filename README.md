@@ -6,12 +6,12 @@ Nerdirc is an IRC Client written in python with a powerful plugin interface. You
 Install
 =======
 
-su
-apt-get install texlive # For the latex plugin.
-Y
-python3 setup.py install
-exit
-
+    su
+    apt-get install texlive # For the latex plugin.
+    Y
+    python3 setup.py install
+    exit
+    
 That is all.
 
 Screenshot
@@ -49,3 +49,4 @@ I'm on irc.freenode.org at #vy.
 Old repository
 ==============
 https://sourceforge.net/p/nerdirc/code/ci/master/tree/
+
