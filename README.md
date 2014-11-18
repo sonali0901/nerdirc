@@ -9,6 +9,8 @@ Install
     su
     apt-get install texlive # For the latex plugin.
     Y
+    apt-get install python3-tk
+    Y
     python3 setup.py install
     exit
     
