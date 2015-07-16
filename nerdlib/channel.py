@@ -94,6 +94,7 @@ class Channel(User):
 
 
         self.entry.pack(fill=X)        
+        self.entry.focus_set()
 
         self.text.pack(side='left', expand=True, fill=BOTH)
         self.box.pack(expand=True, fill=Y)
@@ -166,6 +167,7 @@ if __name__=='__main__':
     app = Channel()
     app.mainloop()
     pass
+
 
 
 

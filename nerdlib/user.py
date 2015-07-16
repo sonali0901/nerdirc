@@ -68,6 +68,7 @@ class User(Toplevel):
         entry_theme = self.config['text_theme']
         self.entry = Entry(master=self.down, **entry_theme)
         self.entry.pack(fill=X)
+        self.entry.focus_set()
 
         self.text.pack(side='left', expand=True, fill=BOTH)
         self.down.pack(side='bottom', fill=X)
@@ -175,6 +176,7 @@ User.module = Module('nerdlib.usermod')
 if __name__ == '__main__':
     user = User()
     user.mainloop()
+
 
 
 
