@@ -12,24 +12,16 @@
     and its host is added to WHO.
 """
 
-#The bot
 from tkinter import *
 import random
 
-BOT = 'Quadrescense'
+# It avoids sending msg to who is in one of these channels
+CONSTRAINT = ['#freenode', '#vy']
+DATABASE   = ['Hi. What do you think of this vim-like editir in python? https://github.com/iogf/vy The supposed chan is #vy. there is this video https://www.youtube.com/watch?v=igZWcc-foJg ']
 
-#It avoids sending msg to who is in one of these channels
-CONSTRAINT = ['#calculus', '#freenode', '#guppy', '##blackhats', '#untwisted']
+WHO        = []
 
-DATABASE = ['Hello. Could you join #calculus and ask them to unban me?',
-            'Hello, Could you join calculus and ask them how can i calculate x^2? i am banned',
-            'Join #calculus and ask somebody to unban me. please',
-            'I need you to join #calculus and ask them a question for me. it is a math channel']
-
-WHO = []
-
-def chmsg(event, server, view):
-    global BOT
+def ujoin(event, server, view):
     global CONSTRAINT
     global WHO
 
@@ -37,19 +29,14 @@ def chmsg(event, server, view):
     nick = event['nicka']
     host = event['host']
 
-    if host in WHO:
-        return
-
+    if host in WHO: return
     for ind in CONSTRAINT:
         win = view.get_win((server.getName(), ind))
 
-        if win:
-            if nick in win.box.get(0, END):
-                return
+        if win and nick in win.box.get(0, END):
+            return
 
-    phrase = random.choice(DATABASE) 
-
-    server.send_msg(BOT, '!carry %s <%s>' % (nick, phrase))
-
+    server.send_msg(nick, random.choice(DATABASE))
     WHO.append(host)
+
 

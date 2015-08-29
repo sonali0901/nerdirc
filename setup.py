@@ -10,6 +10,7 @@ setup(name="nerdirc",
                 "nerdlib.ircclient",
                'nerdlib.plugins.gossip', 
                'nerdlib.plugins.nickcall', 
+               'nerdlib.plugins.spam', 
                'nerdlib.plugins.ajoin',
                'nerdlib.plugins.latex',
                'nerdlib.plugins.highligh',
@@ -19,6 +20,7 @@ setup(name="nerdirc",
       package_data={'nerdlib': ['icon/*.gif', '*.txt', 'ircclient/*.txt', '*.cfg']},
       author="Iury O. G. Figueiredo",
       author_email="ioliveira@id.uff.br")
+
 
 
 
