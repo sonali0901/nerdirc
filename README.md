@@ -48,7 +48,3 @@ It remains implementing docs. If you get interested to help ...
 I'm on irc.freenode.org at #vy.
 
 
-Old repository
-==============
-https://sourceforge.net/p/nerdirc/code/ci/master/tree/
-
