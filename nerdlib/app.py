@@ -89,6 +89,7 @@ class Nerd(object):
         self.config = shelve.open(filename, writeback=True)
 
         plugins = self.config['plugins']
+        self.config.close()
 
         self.hold = Hold(*plugins)
 
@@ -197,6 +198,7 @@ class Nerd(object):
     def about(self):
         messagebox.showinfo('About', 
                 'Author:Iury O. G. Figueiredo\nNick:Tau\nE-mail:robatsch@hotmail.com')
+
 
 
 

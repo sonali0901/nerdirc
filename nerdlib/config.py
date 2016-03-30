@@ -64,9 +64,10 @@ def initialize():
     filename  = join(expanduser('~'), '.nerd.db')
 
     if not exists(filename):
-        create_config_file(join(expanduser('~'), '.nerd'))
+        create_config_file(join(expanduser('~'), '.nerd.db'))
 
-    return join(expanduser('~'), '.nerd')
+    return join(expanduser('~'), '.nerd.db')
+
 
 
 
