@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name="nerdirc",
-      version="1.0.1",
+      version="1.0.2",
       packages=["nerdlib", 
                 "nerdlib.plugins",
                 "nerdlib.utils",
@@ -20,6 +20,7 @@ setup(name="nerdirc",
       package_data={'nerdlib': ['icon/*.gif', '*.txt', 'ircclient/*.txt', '*.cfg']},
       author="Iury O. G. Figueiredo",
       author_email="ioliveira@id.uff.br")
+
 
 
 
