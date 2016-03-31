@@ -129,10 +129,14 @@ class SelectStyle(Toplevel):
         self.bind("<Return>", lambda widget: self.ok())
         self.bind("<Escape>", lambda widget: self.cancel())
 
+        self.config.close()
 
         root.wait_window(self)
 
     def ok(self):
+        filename = initialize()
+        self.config = shelve.open(filename)
+
         self.config['text_theme'] = {
                                       'background': self.e1.get(),
                                       'foreground': self.e2.get(),
@@ -160,6 +164,7 @@ class SelectStyle(Toplevel):
 if __name__ == '__main__':
     root = Tk()
     d = SelectStyle(root)
+
 
 
 

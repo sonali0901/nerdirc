@@ -48,10 +48,14 @@ class SelectServer(Toplevel):
         self.f.pack(side='top', expand=True, fill=BOTH)
         self.bind("<Return>", lambda widget: self.ok())
         self.bind("<Escape>", lambda widget: self.cancel())
+        self.config.close()
 
         root.wait_window(self)
 
     def ok(self):
+        filename = initialize()
+        self.config = shelve.open(filename, writeback=True)
+
         sel = self.listbox.curselection()[0]
         sel = int(sel)
         self.result = self.config['server_list'][sel]
@@ -60,19 +64,26 @@ class SelectServer(Toplevel):
 
     def cancel(self):
         self.result = None
-        self.config.close()
         self.destroy()
 
     def remove(self):
+        filename = initialize()
+        self.config = shelve.open(filename, writeback=True)
+
         sel = self.listbox.curselection()[0]
         sel = int(sel)
         del self.config['server_list'][sel]
         self.listbox.delete(sel)
+        self.config.close()
 
     def add(self):
         askinfo = AskInfo(self.root)
+        filename = initialize()
+        self.config = shelve.open(filename, writeback=True)
+
         self.config['server_list'].append(askinfo.result)
         self.listbox.insert('end', askinfo.result[5])
+        self.config.close()
 
     def get_info(self):
         return self.result
@@ -81,6 +92,8 @@ if __name__ == '__frame1__':
     root = Tk()
 
     d = SelectServer(root)
+
+
 
 
 

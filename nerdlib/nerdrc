@@ -1,0 +1,52 @@
+user_plugins = ['nerdlib.usermod']
+
+server_list = [
+                (
+                'irc.freenode.com',
+                'Tente outra vez.',
+                'Tau',
+                'euler',
+                6667,
+                'Freenode',
+                'utf-8',
+                ['##calculus', '#vy']
+                )
+              ]
+
+plugins = ['nerdlib.stdmod', 
+       	           'nerdlib.startup',
+                   'nerdlib.plugins.gossip.gossip', 
+                   'nerdlib.plugins.nickcall.nickcall', 
+                   'nerdlib.plugins.latex.latex',
+       	           'nerdlib.plugins.highligh.highligh',
+                   'nerdlib.plugins.link.link',
+                   'nerdlib.plugins.ajoin.ajoin',
+                   'nerdlib.plugins.nickclick.nickclick']
+
+text_theme = {
+                        'background': '#fff1e8',
+                        'foreground': 'black',
+                        'font': ('Monospace', 9, 'bold'),
+                     }
+
+
+entry_theme = {
+                        'background': '#fff1e8',
+                        'foreground': 'black',
+                        'font': ('Monospace', 9, 'bold'),
+               }
+
+
+box_theme = {
+                        'background': '#fff1e8',
+                        'foreground': 'black',
+                        'font': ('Monospace', 9, 'bold'),
+                     }
+
+
+
+
+
+
+
+

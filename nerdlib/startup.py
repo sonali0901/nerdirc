@@ -12,6 +12,7 @@ def motd(event, server, view):
         if ind[5].lower() == name:
             for indj in ind[-1]:
                 server.send_data('%s\r\n' % indj)
+    config.close()
 
 
 

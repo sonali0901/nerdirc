@@ -45,27 +45,33 @@ class SelectPlugin(Toplevel):
 
         self.f.pack(side='top', expand=True, fill=BOTH)
         self.bind("<Return>", lambda widget: self.ok())
-
+        self.config.close()
         root.wait_window(self)
 
     def ok(self):
-        self.config.close()
         self.destroy()
 
     def remove(self):
+        filename = initialize()
+        self.config = shelve.open(filename, writeback=True)
+
         sel = self.listbox.curselection()[0]
         sel = int(sel)
         del self.config['plugins'][sel]
         self.listbox.delete(sel)
+        self.config.close()
 
     def add(self):
         askstring = AskString(self.root, 'Load plugin', 'Plugin')
 
         if not askstring.result:
             return
+        filename = initialize()
+        self.config = shelve.open(filename, writeback=True)
 
         self.config['plugins'].append(askstring.result)
         self.listbox.insert('end', askstring.result)
+        self.config.close()
 
     def get_info(self):
         return self.result
@@ -74,6 +80,9 @@ if __name__ == '__main__':
     root = Tk()
 
     d = SelectPlugin(root)
+
+
+
 
 
 

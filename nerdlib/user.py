@@ -93,6 +93,7 @@ class User(Toplevel):
         self.text.bind('<Button-3>', self.post_popup)
 
         self.protocol('WM_TAKE_FOCUS', self.entry.focus_set)
+        self.config.close()
 
     def save_buffer(self):
         f = tkFileDialog.asksaveasfilename()
@@ -176,6 +177,7 @@ User.module = Module('nerdlib.usermod')
 if __name__ == '__main__':
     user = User()
     user.mainloop()
+
 
 
 

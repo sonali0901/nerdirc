@@ -121,6 +121,7 @@ class Channel(User):
         self.entry.bind('<KeyPress-Tab>', self.tab)
 
         self.protocol('WM_TAKE_FOCUS', self.entry.focus_set)
+        self.config.close()
    
     def open_pvt(self, widget):
         ind = self.box.index(ACTIVE)
@@ -167,6 +168,7 @@ if __name__=='__main__':
     app = Channel()
     app.mainloop()
     pass
+
 
 
 
