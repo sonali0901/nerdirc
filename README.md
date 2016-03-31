@@ -11,6 +11,8 @@ Install
     python3
     texlive
 
+**Note:** If you aren't going to use the latex plugin then you don't need to install texlive at all.
+
 #### Install from pip
 
     pip install nerdirc
@@ -105,5 +107,6 @@ def chmsg(event, server, view):
 
 After implementing the handles, load the plugin through the GUI interface.
 It is needed to have the python folder of the plugin appended to the python path.
+
 
 
