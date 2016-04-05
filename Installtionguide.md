@@ -1,6 +1,6 @@
 #Installation Guide
 
-This guide will help you in setting up nerdirc through terminal.
+This guide will help you in setting up nerdirc through console.
 
 ##Clone the project
 Clone the project from GitHub by running the following command:
@@ -41,13 +41,13 @@ After activating the virtualenv we will start installing th necessities for the 
 Tkinter provides a robust and platform independent windowing toolkit, that is available to Python programmers.
 
 ##Installing setup file
-	come out the virtual environment folder and get into the folder that was cloned.
+Come out the virtual environment folder and get into the folder that was cloned.
 		cd .. 
 		cd nerdirc
-	install the setup file by running the following command
+Install the setup file by running the following command
 		python setup.py install
 
-##Run the application by he following command in the terminal
+##Run the application by the following command in the terminal
 	./nerdirc
 
 ##Deactivating virtualenv
