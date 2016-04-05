@@ -42,10 +42,11 @@ Tkinter provides a robust and platform independent windowing toolkit, that is av
 
 ##Installing setup file
 Come out the virtual environment folder and get into the folder that was cloned.
-		cd .. 
-		cd nerdirc
+	cd .. 
+	cd nerdirc
 Install the setup file by running the following command
-		python setup.py install
+
+	python setup.py install
 
 ##Run the application by the following command in the terminal
 	./nerdirc
