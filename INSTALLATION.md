@@ -17,7 +17,7 @@ For nerdirc, this would correspond to:
 Create a virtual environment for your project as shown below. venv here is name of the folder that will be created. 
 	It can be changed as per choice.
 	
-	virtualenv venv
+	virtualenv -p /usr/lib/python3 venv
 
 ##Activating the virtualenv
 Get into the virtualenv where the bin file is present and activate it as follows-
@@ -26,21 +26,25 @@ Get into the virtualenv where the bin file is present and activate it as follows
 	source bin/activate
 
 ##Installing python3
-After activating the virtualenv we will start installing th necessities for the project.
+
+After activating the virtualenv we will start installing the necessities for the project.
 
 	 sudo apt-get install python3
 
 ##Installing texlive
+
 	sudo apt-get install textlive
 
 **Note: If you aren't going to use the latex plugin then you don't need to install texlive at all.**
 
 ##Installing Tkinter
+
 	sudo apt-get install python3-tk
 
 Tkinter provides a robust and platform independent windowing toolkit, that is available to Python programmers.
 
 ##Installing setup file
+
 Come out the virtual environment folder and get into the folder that was cloned.
 
 	cd .. 
@@ -54,6 +58,7 @@ Install the setup file by running the following command
 	./nerdirc
 
 ##Deactivating virtualenv
+
 When done working with the virtual environment, deactivate it by running following command.
 	
 	deactivate
